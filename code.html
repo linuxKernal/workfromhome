@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="code.css">
+    <title>code upload</title>
+</head>
+<body>
+    <header id="#top">
+        <span>
+        <h2 id="home">
+            Code IT forum
+        </h2>
+        </span>
+            <ul>
+                <li onclick="getFunction(1)">Home</li>
+                <li onclick="getFunction(2)">Contact</li>
+                <li onclick="getFunction(3)">About</li>
+            </ul>
+    </header>    
+<h2 class="title">Code Upload</h2>
+
+<div class="container">
+    <h2 class="divTitle">share your code</h2>
+    <form>
+        <div class="inputDiv">
+            <label for="title" id="title">Title</label>
+            <input type="text" name="title" class="textBox" id="title" onfocus="newText(0)">
+        </div>
+
+        <div class="inputDiv">
+            <label for="note" id="note">Description</label>
+            <input type="text" name="note" class="textBox" id="note" onfocus="newText(1)">
+        </div>
+
+        <div class="inputDiv">
+            <label for="code" id="code">Code</label>
+            <textarea rows="5" id="code" class="textBox" name="program" onfocus="newText(2)"> </textarea>
+        </div>
+        <button class="butn">submit</button>
+    </from>
+</div>
+
+<script src="code.js"></script>
+</body>
+</html>
