@@ -19,7 +19,7 @@ const temp = async (param)=>{
         return await res.json();
     })
     .then(data=>{
-        alertFunc(data);
+        alertFunc(data.msg);
     })
     .catch(err=>{
         alertFunc(err)
