@@ -1,16 +1,20 @@
 
 const alertBox = document.getElementById("alertbox");
 const alertMessage = document.getElementById("alertMsg");
-
+const butn = document.getElementById("butn");
 function alertFunc(str){
     alertMessage.innerText = str;
     if(alertBox.style.display=="none") alertBox.style.display = "";
-    else alertBox.style.display = "none";
+    else{
+        alertBox.style.display = "none";
+        window.location.href = "index.html"
+    }
 }
 
 const options = {hour12:true};
 
 const temp = async (param)=>{
+    butn.innerText = "loading...";
     let date = new Date();
     const title = param.title.value.trim();
     const note = param.note.value.trim();
@@ -24,6 +28,7 @@ const temp = async (param)=>{
     })
     .then(async res=>{
         return await res.json();
+        butn.innerText = "Done";
     })
     .then(data=>{
         alertFunc(data.msg);
