@@ -14,7 +14,7 @@ const temp = async (param)=>{
     const title = param.title.value.trim();
     const note = param.title.value.trim();
     const code = param.title.value.trim();
-    await fetch(`serverlessmongodb.herokuapp.com/codebase?title=${title}&note=${note}&program=${code}&time=${date.toLocaleString('en-US')}`)
+    await fetch(`serverlessmongodb.herokuapp.com/codebase?title=${title}&note=${note}&program=${code}&time=${date.toLocaleString('en-US')}`,{method:'POST'})
     .then(async res=>{
         return await res.json();
     })
