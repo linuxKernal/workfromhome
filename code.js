@@ -8,6 +8,7 @@ function alertFunc(str){
     else alertBox.style.display = "none";
 }
 
+const options = {hour12:true};
 
 const temp = async (param)=>{
     let date = new Date();
