@@ -1,27 +1,24 @@
-const inputBox = document.getElementsByClassName("textBox")
 
-const list = ["program title","valid description","program"];
+const alertBox = document.getElementById("alertbox");
+const alertMessage = document.getElementById("alertMsg");
 
-inputBox[0].setAttribute("placeholder",list[0]);
-inputBox[1].setAttribute("placeholder",list[1]);
-inputBox[2].setAttribute("placeholder",list[2]);
+function alertFunc(str){
+    alertMessage.innerText = str;
+    if(alertBox.style.display=="none") alertBox.style.display = "";
+    else alertBox.style.display = "none";
+}
 
-const textBox = document.getElementById("title")
-const textBox1 = document.getElementById("note")
-const textBox12 = document.getElementById("code")
 
-const newText = (param)=>{
-    if(param=="0") {
-        textBox.style.visibility = "visible";
-        index[0].setAttribute("placeholder","");
-    }
-    if(param=="1"){
-        textBox1.style.visibility = "visible";
-        index[1].setAttribute("placeholder","");
-    } 
-    if(param=="2"){
-        textBox12.style.visibility = "visible";
-        index[2].setAttribute("placeholder","");
-    }
-
+const temp = async (param)=>{
+    let date = new Date();
+    const title = param.title.value.trim();
+    const note = param.title.value.trim();
+    const code = param.title.value.trim();
+    await fetch(`serverlessmongodb.herokuapp.com/codebase?title=${title}&note=${note}&program=${code}&time=${date.toLocaleString('en-US')}`)
+    .then(res=>{
+        alertFunc(res);
+    })
+    .catch(err=>{
+        alertFunc(err)
+    })
 }

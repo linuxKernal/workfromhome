@@ -53,8 +53,12 @@ header ul li:hover{
 	border-radius: 0%;
 }
 .title{
-    color: green;
+    color:rgb(196, 197, 196);;
     text-align: center;
+	position: relative;
+	top:3rem;
+	text-transform: uppercase;
+	letter-spacing: .4rem;
 }
 .container{
     background-color: rgb(234, 241, 234);
@@ -63,6 +67,10 @@ header ul li:hover{
 	padding: .3rem;
     position: relative;
     top: 5rem;
+}
+
+.container:hover{
+	box-shadow: .1rem .1rem .5rem .2rem rgb(187, 185, 185);
 }
 
 .divTitle{
@@ -84,7 +92,7 @@ form label{
 	display: block;
 	margin: .3rem;
 	margin-left: 0;
-	visibility: hidden;
+	/* visibility: hidden; */
 }
 
 
@@ -115,6 +123,58 @@ form label{
 	border: 2px solid transparent;
 }
 
+.alertBox{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(49, 45, 45, 0.404);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alertDiv{
+	padding: 2rem;
+	color: gray;
+	background-color: white;
+	text-transform:capitalize;
+	border:2px solid white;
+	width:25vw;
+	text-align: center;
+	box-shadow: .1rem .1rem 1rem .1rem rgb(110, 109, 109);
+}
+.alert_img{
+	width:4rem;
+}
+.alertDiv h3{
+	margin-top:1rem;
+}
+.image_line{
+	width:6.5rem;
+	padding-top:1rem;
+	padding-bottom: 1rem;
+	border:2px solid rgba(128, 128, 128, 0.74);
+	border-radius:50vw;
+	margin: 0 auto;
+}
+
+.alertButn{
+	font-size: 1.3rem;
+	padding: .5rem;
+	width:10rem;
+	color: white;
+	background-color: rgb(8, 167, 8);
+	border-radius: .3rem;
+	border: 2px solid transparent;
+	margin-top: 1rem;
+}
+
+.alertButn:hover{
+	border: 2px solid white;
+}
+
 @media only screen and (max-width:450px){
 	header{
 		flex-direction: column;
@@ -127,6 +187,42 @@ form label{
 		padding: .3rem;
 	}
 	#Fimage{
+		width:80vw;
+	}
+}
+
+@media only screen and  (max-width:750px){
+	.container{
+		width:60vw;
+	}
+	.inputDiv{
+		width:50vw;
+	}
+	.inputDiv input,.inputDiv textarea{
+		width:50vw;
+	}
+}
+
+@media only screen and  (max-width:750px){
+	.container{
+		width:70vw;
+	}
+	.inputDiv{
+		width:60vw;
+	}
+	.inputDiv input,.inputDiv textarea{
+		width:60vw;
+	}
+}
+
+@media only screen and  (max-width:500px){
+	.container{
+		width:90vw;
+	}
+	.inputDiv{
+		width:80vw;
+	}
+	.inputDiv input,.inputDiv textarea{
 		width:80vw;
 	}
 }

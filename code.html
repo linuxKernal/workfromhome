@@ -20,27 +20,37 @@
                 <li onclick="getFunction(3)">About</li>
             </ul>
     </header>    
-<h2 class="title">Code Upload</h2>
+<h2 class="title">share your best code for the world</h2>
 
 <div class="container">
     <h2 class="divTitle">share your code</h2>
-    <form>
+    <form action="javascript:temp(this)">
         <div class="inputDiv">
-            <label for="title" id="title">Title</label>
-            <input type="text" name="title" class="textBox" id="title" onfocus="newText(0)">
+            <label for="title">Title</label>
+            <input type="text" name="title" required class="textBox" id="title">
         </div>
 
         <div class="inputDiv">
-            <label for="note" id="note">Description</label>
-            <input type="text" name="note" class="textBox" id="note" onfocus="newText(1)">
+            <label for="note">Description</label>
+            <input type="text" name="note" required class="textBox" id="note">
         </div>
 
         <div class="inputDiv">
-            <label for="code" id="code">Code</label>
-            <textarea rows="5" id="code" class="textBox" name="program" onfocus="newText(2)"> </textarea>
+            <label for="code">Code</label>
+            <textarea rows="5" id="code" required class="textBox" name="program"></textarea>
         </div>
         <button class="butn">submit</button>
-    </from>
+    </form>
+</div>
+
+<div class="alertBox" id="alertbox" style="display: none;">
+    <div class="alertDiv" id="alertdiv">
+        <div class="image_line">
+            <img src="tick_image.jpg" alt="super image" class="alert_img">
+        </div>
+        <h3 id="alertMsg">thank you for your code</h3>
+        <button class="alertButn" onclick="alertFunc()">Ok</button>
+    </div>
 </div>
 
 <script src="code.js"></script>
