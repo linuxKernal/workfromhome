@@ -14,7 +14,7 @@ const temp = async (param)=>{
     const title = param.title.value.trim();
     const note = param.title.value.trim();
     const code = param.title.value.trim();
-    await fetch("http://localhost:3001/codebase",{method:'POST',
+    await fetch("https://serverlessmongodb.herokuapp.com/codebase",{method:'POST',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
