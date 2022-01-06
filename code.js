@@ -15,8 +15,11 @@ const temp = async (param)=>{
     const note = param.title.value.trim();
     const code = param.title.value.trim();
     await fetch(`serverlessmongodb.herokuapp.com/codebase?title=${title}&note=${note}&program=${code}&time=${date.toLocaleString('en-US')}`)
-    .then(res=>{
-        alertFunc(res);
+    .then(async res=>{
+        return await res.json();
+    })
+    .then(data=>{
+        alertFunc(data);
     })
     .catch(err=>{
         alertFunc(err)
