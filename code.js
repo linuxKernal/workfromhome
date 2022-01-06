@@ -7,6 +7,7 @@ function alertFunc(str){
     if(alertBox.style.display=="none") alertBox.style.display = "";
     else{
         alertBox.style.display = "none";
+        window.location.href = "index.html"
     }
 }
 
@@ -32,7 +33,6 @@ const temp = async (param)=>{
     })
     .then(data=>{
         alertFunc(data.msg);
-        window.location.href = "index.html"
     })
     .catch(err=>{
         alertFunc(err)
