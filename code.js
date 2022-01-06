@@ -13,8 +13,8 @@ const options = {hour12:true};
 const temp = async (param)=>{
     let date = new Date();
     const title = param.title.value.trim();
-    const note = param.title.value.trim();
-    const code = param.title.value.trim();
+    const note = param.note.value.trim();
+    const code = param.program.value.trim();
     await fetch("https://serverlessmongodb.herokuapp.com/codebase",{method:'POST',
     headers: {
         'Accept': 'application/json',
