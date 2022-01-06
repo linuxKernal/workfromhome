@@ -19,7 +19,7 @@ const temp = async (param)=>{
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({title:title,program:code,time:date.toLocaleString('en-US'),note:note})
+      body: JSON.stringify({title:title,program:code,time:date.toLocaleString('en-GB', options),note:note})
     })
     .then(async res=>{
         return await res.json();
